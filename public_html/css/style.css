@@ -3,7 +3,29 @@ Auteur  : DOMINGUES PEDROSA Samuel
 Date    : 15.02.2019 
 Version : 1.0
 */
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul, footer{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #303030;
+}
+
 li{
-    float: left;
-    list-style-type: none;
+  float: left;
+}
+
+li a, footer a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
