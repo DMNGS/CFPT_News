@@ -71,8 +71,10 @@ $libelle = filter_input(INPUT_GET, 'libelle', FILTER_SANITIZE_STRING);
             </p>
         </section>
         <footer>
+            <p>
             <a href="formulaire.php">Modifier le contenu</a>
-            <p>Tèl. +41 022 022 22 22 email: news.cfpt@ge.ch</p>
+            Tèl. +41 022 022 22 22 email: news.cfpt@ge.ch &COPY;CFPT
+            </p>
         </footer>
     </body>
 </html>
