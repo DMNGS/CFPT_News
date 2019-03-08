@@ -38,8 +38,7 @@ $libelle = filter_input(INPUT_GET, 'libelle', FILTER_SANITIZE_STRING);
                     </div> 
                     <div class="subnav">
                         <button class="subnavbtn">A propos<i class="fa fa-caret-down"></i></button>
-                    </div> 
-                    <a href="#contact">Contact</a>
+                    </div>
                 </div>
                 <?php
                 if ($libelle == "newtech") {
@@ -72,8 +71,8 @@ $libelle = filter_input(INPUT_GET, 'libelle', FILTER_SANITIZE_STRING);
             </p>
         </section>
         <footer>
-            <a href="pages/contact.html">Contact</a>
             <a href="formulaire.php">Modifier le contenu</a>
+            <p>Tèl. +41 022 022 22 22 email: news.cfpt@ge.ch</p>
         </footer>
     </body>
 </html>

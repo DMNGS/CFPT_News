@@ -23,7 +23,7 @@ li{
 }
 
 
-li a, footer a{
+li a, footer a, footer p{
   display: block;
   color: white;
   text-align: center;
@@ -105,4 +105,8 @@ li a, footer a{
 
 #date {
     align-items: flex-end;
+}
+img{
+    width: 10%;
+    height: 10%;
 }
