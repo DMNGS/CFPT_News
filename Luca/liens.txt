@@ -1,3 +1,0 @@
-http://php.net/manual/fr/function.file-put-contents.php
-
-https://www.w3schools.com/php/php_file_create.asp
