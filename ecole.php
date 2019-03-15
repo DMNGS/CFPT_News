@@ -1,11 +1,18 @@
 <?php
 session_start();
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+$mod = filter_input(INPUT_GET, 'mod', FILTER_SANITIZE_STRING);
 
+if (empty($_SESSION['black'])) {
+    $_SESSION['black'] = "white";
+}
+
+if ($mod == "yes") {
+    if ($_SESSION['black'] == "white") {
+        $_SESSION['black'] = "black";
+    }else{
+        $_SESSION['black'] = "white";
+    }
+}
 ?>
 <html>
     <head>
@@ -14,6 +21,7 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
+    <?php include_once 'blackmod.php'; ?>
     <body>
         <header>
             <img src="img/logo.png" alt="logo cfpt"/>

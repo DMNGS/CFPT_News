@@ -14,6 +14,19 @@ function checkIdentification($nom, $mdp) {
 }
 
 session_start();
+$mod = filter_input(INPUT_GET, 'mod', FILTER_SANITIZE_STRING);
+
+if (empty($_SESSION['black'])) {
+    $_SESSION['black'] = "white";
+}
+
+if ($mod == "yes") {
+    if ($_SESSION['black'] == "white") {
+        $_SESSION['black'] = "black";
+    }else{
+        $_SESSION['black'] = "white";
+    }
+}
 
 if (!isset($action)) {
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
@@ -41,19 +54,20 @@ if ($action) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
+    <?php include_once 'blackmod.php'; ?>
     <body>
         <header>
             <img src="img/logo.png" alt="logo cfpt"/>
             <h1>Site News CFPT</h1>
         </header>
         <?php include 'nav.php' ?>
-        <section>
+        <section style="text-align: center">
             <?php if (empty($_SESSION['nom'])) { ?>
                 <form method="POST" action="pageLogin.php">
-                    <p>Nom d'utilisateur:</p>
-                    <p><input type="text" name="nom"/></p>
-                    <p>Mot de passe:</p>
-                    <p><input type="password" name="mdp"/></p>
+                    Nom d'utilisateur<br>
+                    <input type="text" name="nom"/><br><br>
+                    Mot de passe:<br>
+                    <input type="password" name="mdp"/><br>
                     <p><input type="submit" name="action" value="Se connecter"/></p>
                 </form>
                 <?php

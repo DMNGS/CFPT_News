@@ -6,7 +6,19 @@ Version : 1.0
 -->
 <?php
 session_start();
-$libelle = filter_input(INPUT_GET, 'libelle', FILTER_SANITIZE_STRING);
+$mod = filter_input(INPUT_GET, 'mod', FILTER_SANITIZE_STRING);
+
+if (empty($_SESSION['black'])) {
+    $_SESSION['black'] = "white";
+}
+
+if ($mod == "yes") {
+    if ($_SESSION['black'] == "white") {
+        $_SESSION['black'] = "black";
+    }else{
+        $_SESSION['black'] = "white";
+    }
+}
 ?>
 <html>
     <head>
@@ -15,6 +27,7 @@ $libelle = filter_input(INPUT_GET, 'libelle', FILTER_SANITIZE_STRING);
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
+    <?php include_once 'blackmod.php'; ?>
     <body>
         <header>
             <img src="img/logo.png" alt="logo cfpt"/>
