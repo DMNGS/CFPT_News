@@ -35,9 +35,6 @@ if ($mod == "yes") {
             <p>Sur chaque article, nous indiquons les sources de ce dernier. Les auteurs d'articles sont vérifiés pour ne pas avoir des articles avec des fautes. </p>
             <p>Les créateurs du site sont : Elian Cruz, Luca Wolhers, Steven Favre et Samuel Domingues.</p>
         </section>
-        <footer>
-            <a href="pages/contact.html">Contact</a>
-            <?= empty($_SESSION['nom']) ? '' : '<a href="formulaire.php">Modifier le contenu</a>' ?>
-        </footer>
+        <?php include 'footer.php' ?>
     </body>
 </html>
