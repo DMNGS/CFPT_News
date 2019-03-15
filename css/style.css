@@ -3,6 +3,11 @@ Auteur  : DOMINGUES PEDROSA Samuel
 Date    : 15.02.2019 
 Version : 1.0
 */
+header{
+    display: flex;
+    flex-direction: row;
+}
+
 body{
     width: 100%;
     height: 100%;
@@ -23,7 +28,7 @@ li{
 }
 
 
-li a, footer a{
+li a, footer a, footer p{
   display: block;
   color: white;
   text-align: center;
@@ -31,6 +36,10 @@ li a, footer a{
   text-decoration: none;
 }
 
+img{
+    width: 10%;
+    height: 10%;
+}
 
 #date{
     padding-left: 75%;
