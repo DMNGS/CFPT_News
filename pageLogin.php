@@ -65,9 +65,6 @@ if ($action) {
                 <h2>Bonjour <?= $nom ?>, vous êtes bien connecté(e).</h2>
             <?php } ?>
         </section>
-        <footer>
-            <a href="pages/contact.html">Contact</a>
-            <?= empty($_SESSION['nom']) ? '' : '<a href="formulaire.php">Modifier le contenu</a>' ?>
-        </footer>
+        <?php include 'footer.php' ?>
     </body>
 </html>
