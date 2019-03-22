@@ -1,0 +1,11 @@
+Facebook a stocké durant des années des centaines de millions de mots de passe en clair
+
+Facebook a stocké des centaines de millions de mots de passe en clair sur une base de données interne. Entre 200 et 600 millions de mots de passe, dont certains datés de 2012, ont été stockés en clair dans un fichier accessible à 20.000 employés.  Selon le journaliste Brian Krebs, qui a révélé l'information, « 2.000 ingénieurs ou développeurs ont fait environ 9 millions de requêtes » dans ce fichier. Et auraient pu de cette manière lire n'importe quel mot de passe stocké dans cette base.  
+
+Pour rappel, une règle de base de sécurité informatique : lorsqu'un site enregistre votre identifiant et votre mot de passe, il doit le faire de manière chiffrée. Il existe pour cela de nombreux algorithmes performants qui protègent votre sésame contre des yeux trop curieux en interne... et en cas de piratage. On se demande bien comment un site aussi majeur que Facebook a pu laisser cette base de données ouverte aux quatre vents. 
+
+Ce que ça implique
+Dans un communiqué, l’entreprise a déclaré mener actuellement une enquête interne, mais précise que jusqu’ici, rien n’indique qu’un de leurs employés n’ait eu accès à ces données. Facebook tente encore de minimiser en assurant qu’il va notifier les millions d’utilisateurs concernés « par mesure de précaution ». Les chiffres donnent en tout cas le tournis : « nous estimons que nous allons notifier des centaines de millions d'utilisateurs Facebook Lite, des dizaines de millions d'autres utilisateurs Facebook, et des dizaines de milliers d'utilisateurs Instagram » indique la firme dans un communiqué. 
+
+Le contexte
+Facebook n'en est pas à son premier scandale quant à la gestion de la des données personnelles de ses utilisateurs. Bien que le réseau communautaire tente de renforcer ses mesures de sécurité, ce fichier vertigineux pourrait bien être la source d'une quantité abyssale de futurs scandales.
