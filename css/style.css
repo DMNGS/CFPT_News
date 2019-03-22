@@ -20,6 +20,7 @@ ul, footer{
   padding: 0px;
   overflow: hidden;
   background-color: #006bef;
+
 }
 
 li{
@@ -123,4 +124,11 @@ li a, footer a{
 }
 section{
     margin-top: 3%;
+}
+.basDePage{
+    text-align: center;
+      color: white;
+}
+img{
+    width: 10%;
 }

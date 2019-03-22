@@ -6,24 +6,22 @@ and open the template in the editor.
 -->
 <?php
 session_start();
-if (!isset($_SESSION['nomArticleChoisi'])) {
-    $ajouter = filter_input(INPUT_POST, 'ajouter');
+$ajouter = filter_input(INPUT_POST, 'ajouter');
 $modifier = filter_input(INPUT_POST, 'modifier');
 $unlink = filter_input(INPUT_POST, 'unlink');
+$retour = filter_input(INPUT_POST, 'retour');
+
+if (!isset($_SESSION['nomArticleChoisi'])) {
 $nomArticle = filter_input(INPUT_POST, 'nomArticle', FILTER_SANITIZE_STRING);
 $article = filter_input(INPUT_POST, 'article', FILTER_SANITIZE_STRING);
 $choisirArticle = array();
 $articleAChoisir = filter_input(INPUT_POST, 'articleAChoisir');
 $texteModifie = filter_input(INPUT_POST, 'texteModifie', FILTER_SANITIZE_STRING);
-
 $nomArticleChoisi = "";
 $_SESSION['nomArticleChoisi'] = "";
 }
 else{
     $nomArticleChoisi = $_SESSION['nomArticleChoisi'];
-    $ajouter = filter_input(INPUT_POST, 'ajouter');
-$modifier = filter_input(INPUT_POST, 'modifier');
-$unlink = filter_input(INPUT_POST, 'unlink');
 $nomArticle = filter_input(INPUT_POST, 'nomArticle', FILTER_SANITIZE_STRING);
 $article = filter_input(INPUT_POST, 'article', FILTER_SANITIZE_STRING);
 $choisirArticle = array();
@@ -61,6 +59,7 @@ $texteModifie = filter_input(INPUT_POST, 'texteModifie', FILTER_SANITIZE_STRING)
                     array_push($choisirArticle, $filename);
                 }
                 foreach ($choisirArticle as $value) {
+                    
                     $value = substr($value, 4);
                     echo "<input type='submit' name='articleAChoisir' value='$value'>";
                 }
@@ -69,7 +68,6 @@ $texteModifie = filter_input(INPUT_POST, 'texteModifie', FILTER_SANITIZE_STRING)
                     $nomArticleChoisi = $articleAChoisir;
                     if ($_SESSION['nomArticleChoisi'] == "") {
                         $_SESSION['nomArticleChoisi'] = $nomArticleChoisi;
-                        
                     }
                     ?>
                 <p><label>Voici le texte à modifier</label></p>
@@ -83,18 +81,29 @@ $texteModifie = filter_input(INPUT_POST, 'texteModifie', FILTER_SANITIZE_STRING)
             }
             ?>
             <p><input type="submit" name="modifier" value="submit"></p>
-            
-            <p><label>Supprimer un article : </label></p>
+            <!-- <p><label>Supprimer un article : </label></p>-->
             <?php
-            foreach ($choisirArticle as $value) {
+           /* foreach ($choisirArticle as $value) {
                     $value = substr($value, 4);
                     echo "<input type='submit' name='unlink' value='$value'>";
                 }
         if ($unlink) {
-            $myFileUnlink = "./tmp/".$articleAChoisir;
-            unlink($myFileUnlink) or die("Ne peut pas supprimer le fichier");
+            $myFileUnlink = "./tmp/".$unlink;
+            if (!unlink($myFileUnlink)) {
+                echo "Error deleting $myFileUnlink";
+            }
+            else{
+                echo "Deleted file $myFileUnlink";
+            }
+            //unlink($myFileUnlink) or die("Ne peut pas supprimer le fichier");
         }
-            ?>
+           */ ?>
+            <p><label>Retourner :</label><input type="submit" name="retour" value="Retour"></p>
+        <?php
+        if ($retour) {
+            header("Location: index.php");
+        }
+        ?>
         </form>
     </body>
 </html>
