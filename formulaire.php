@@ -33,10 +33,11 @@ if (!isset($_SESSION['nomArticleChoisi'])) {
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <section style="align-content: center">
-            <form action="formulaire.php" method="POST">
+        <section>
+            <form class="sectionDonnees" action="formulaire.php" method="POST">
                 <table>
                     <tr>
                         <td>
@@ -63,7 +64,10 @@ if (!isset($_SESSION['nomArticleChoisi'])) {
                                 <label>Voici le texte à modifier</label>
                             </td>
                             <td>
-                                <textarea name="texteModifie"><?php echo file_get_contents("./tmp/$articleAChoisir"); ?></textarea>
+                                <?php
+                                $balisesNeutralisees = htmlentities($articleAChoisir);
+                            ?>
+                                <textarea cols="45"rows="8"><?php echo file_get_contents("./tmp/$balisesNeutralisees"); ?></textarea>
                                 <?php
                             }
                             if ($modifier) {
