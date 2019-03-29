@@ -24,7 +24,7 @@ if ($mod == "yes") {
     <?php include_once 'blackmod.php'; ?>
     <body>
         <header>
-            <img src="img/logo.png" alt="logo cfpt"/>
+            <img class="imageCFPT" src="img/logo.png" alt="logo cfpt"/>
             <h1>Site News CFPT</h1>
         </header>
         <?php include 'nav.php' ?>

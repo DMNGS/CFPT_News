@@ -135,12 +135,17 @@ section{
     text-align: center;
       color: white;
 }
-img{
+.imageCFPT{
     width: 10%;
+    float: left;
 }
 textarea {
    resize: none;
 }
 .sectionDonnees{
     
+}
+img{
+    float: right;
+    width: 10%;
 }
