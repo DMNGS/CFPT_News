@@ -1,4 +1,4 @@
-Samsung Space Monitor, l’écran qui agrandit votre bureau
+<h3>Samsung Space Monitor, l’écran qui agrandit votre bureau.</h3>
 
 Grâce à son ingénieux système de fixation, l'écran Space Monitor de Samsung occupe bien moins d'espace qu'un moniteur classique.
 
@@ -9,7 +9,7 @@ Un grand écran pour jouer ou travailler, c’est sympa, mais c'est un peu encom
 
 Pas de nouvelle techno mirifique en vue, pourtant. Pour son Space Monitor, décliné en versions 27 et 32 pouces, le géant coréen a tout simplement remplacé le socle des écrans ordinaires par un système de fixation proche de celui des lampes d’architecte, une mâchoire qui vient se visser sur le bord du plan de travail.
 
- 
+ <img src="img/samsung.png" alt=""/>
 
 
 Grâce à un bras articulé, l’écran peut être rabattu sur le bureau pour accéder facilement aux prises vidéo de l’appareil (HDMI et Mini DisplayPort). L'articulation permet aussi de rapprocher l'écran de l'utilisateur ou de le plaquer contre un mur pour dégager un maximum d'espace sur le bureau.

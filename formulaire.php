@@ -37,29 +37,33 @@ $texteModifie = filter_input(INPUT_POST, 'texteModifie', FILTER_SANITIZE_STRING)
     </head>
     <body>
 
-        <?php
+        <?php/*
         if ($ajouter) {
             $fp = fopen('tmp/' . $nomArticle . '.txt', 'w');
             fwrite($fp, $article);
             fclose($fp);
-        }
+        }*/
         ?>
 
         <form action="formulaire.php" method="POST">
-
-            <p><label>Créer un nom pour un nouvel article</label><input type="text" name="nomArticle"></p>
+            
+            <!--<p><label>Créer un nom pour un nouvel article</label><input type="text" name="nomArticle"></p>
             <p> <label>Ecrire le texte à publier</label>
                 <input type="text" name="article"></p>    
-            <p><input type="submit" name="ajouter" value="ajouter un nouveau article"></p>
+            <p><input type="submit" name="ajouter" value="ajouter un nouveau article"></p>-->
+            
 
-            <p><label>Choisir l'article à modifier</label>
-                <!-- Afficher tout les fichiers dans le dossier tmp-->
+            <p><label>Choisir l'article à modifier</label> <label class="texteModifier">Voici le texte à modifier</label></p>
+            
+            <!-- Afficher tout les fichiers dans le dossier tmp-->
                 <?php
                 foreach (glob("tmp/*")as $filename) {
                     array_push($choisirArticle, $filename);
                 }
                 foreach ($choisirArticle as $value) {
-                    
+                    if ($value == "tmp/Article Technologie 1.txt") {
+                        echo "<br>";
+                    }
                     $value = substr($value, 4);
                     echo "<input type='submit' name='articleAChoisir' value='$value'>";
                 }
@@ -70,8 +74,7 @@ $texteModifie = filter_input(INPUT_POST, 'texteModifie', FILTER_SANITIZE_STRING)
                         $_SESSION['nomArticleChoisi'] = $nomArticleChoisi;
                     }
                     ?>
-                <p><label>Voici le texte à modifier</label></p>
-                <textarea name="texteModifie"><?php echo file_get_contents("./tmp/$articleAChoisir"); ?></textarea>;
+            <textarea  name="texteModifie"><?php echo file_get_contents("./tmp/$articleAChoisir"); ?></textarea>;
             <?php } 
             if ($modifier) {
                 $nomArticleChoisi = $_SESSION['nomArticleChoisi'];
