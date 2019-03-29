@@ -34,7 +34,10 @@ h2{
 p{
     margin: 2%;
 }
-
+tr{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
 
 li a, footer a{
   display: block;
