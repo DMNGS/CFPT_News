@@ -1,9 +1,9 @@
-Piratage : la protection vidéo 4K d’iTunes a-t-elle été craquée ?
+<h3>Piratage : la protection vidéo 4K d’iTunes a-t-elle été craquée ?</h3>
 
 La circulation des version 4K de la collection James Bond, exclusivité de l’iTunes store, laisser à penser que la protection des contenus 4K de la plateforme d’Apple ont fini par tomber. Le début du déluge ?
 
 La protection vidéo d’iTunes a-t-elle été contournée ? C’est ce que suggère l’arrivée sur les réseaux d’échange de fichier de la « James Bond Collection », une archive contenant l’intégrale mettant en scène le célèbre agent secret britannique dans des versions 4K. Or, ces nouvelles numérisations sont une exclusivité iTunes – un pack qui coûte 342,76$ – et il est donc impossible qu’il s’agisse de rips issus de Blu-rays.
-
+<img src="img/itunes4k.png" alt=""/>
 Ce que cela implique
 Si les films piratés portant la mention « web-rip » sont légion sur les réseaux de partage, ce n’était jusqu’ici pas le cas des contenus 4K « web-dl » c’est-à-dire issus de téléchargement web dont les protections numériques sont bien plus ardues à casser. Les fichiers 4K « web-rip » sont  capturés via des dispositifs externes : un procédé fastidieux, puisqu'il faut enregistrer le film au fur et à mesure qu'il est diffusé dans le périphérique. A contrario, un  « web-dl » est un téléchargement direct du fichier dont on fait sauter le verrou par un « simple » programme de crack. Une opération plus simple et plus rapide qui pourrait ouvrir la boîte de Pandore...
 
